@@ -12,4 +12,4 @@ function checkName(name) {
   }
 }
 
-console.log(checkName("Salman"));
+// console.log(checkName());
