@@ -23,17 +23,18 @@
 
 function calculateMoney(ticketSale) {
   if (ticketSale < 0) {
-    return "invalid Number";
+    return "invalid Number. You should be a valid positive number.";
+  } else {
+    const gateManCost = 500;
+    const lunchCost = 50 * 8;
+    const totalStaffCost = gateManCost + lunchCost;
+
+    const perTicketPrice = 120;
+    const totalTicketPrice = perTicketPrice * ticketSale;
+
+    const TotalRemainingAmount = totalTicketPrice - totalStaffCost;
+    return TotalRemainingAmount;
   }
-  const getManCost = 500;
-  const staffLunchCost = 50 * 8;
-  const totalCost = getManCost + staffLunchCost;
-
-  const ticketPrice = 120;
-  const ticketTotalPrice = ticketPrice * ticketSale;
-
-  const zooTotalCost = ticketTotalPrice - totalCost;
-  return zooTotalCost;
 }
 
-console.log(calculateMoney(-10));
+// console.log(calculateMoney());

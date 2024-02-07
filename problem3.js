@@ -27,7 +27,7 @@
 
 function deleteInvalids(array) {
   if (!Array.isArray(array)) {
-    return "invalid";
+    return "invalid array. input should be a valid Array.";
   }
 
   let numbersArr = [];
