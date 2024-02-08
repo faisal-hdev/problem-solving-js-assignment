@@ -27,3 +27,27 @@
 //  Challenge 📢 : ফাংশন টি তখন ই “invalid input” string টি রি টার্ন করবে ।
 //  ● যদি প্রথম প্যারামি টার টি Array না হয়
 //  ● যদি ও 2য় প্যারামি টার টি নাম্বার না হয়
+
+function monthlySavings(arr, livingCost) {
+  if (!Array.isArray(arr) || typeof livingCost !== "number") {
+    return "invalid input";
+  }
+  let totalPayment = 0;
+
+  for (const singlePayment of arr) {
+    if (3000 <= singlePayment) {
+      const tax = (singlePayment * 20) / 100;
+      const paymentWithoutTax = singlePayment - tax;
+      totalPayment = totalPayment + paymentWithoutTax;
+    } else {
+      totalPayment = totalPayment + singlePayment;
+    }
+  }
+
+  let totalSaving = totalPayment - livingCost;
+  if (totalSaving < 0) {
+    return "earn more";
+  } else return totalSaving;
+}
+
+console.log(monthlySavings(100, [900, 2700, 3400]));

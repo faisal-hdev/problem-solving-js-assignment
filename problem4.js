@@ -29,3 +29,16 @@
 
 // Challenge 📢: যদি ক োন একটা প্র োপার্টি মি সি ং থাকে অথবা যদি birthYear 4 ডি জি টে র না হয় ফাংশন টি
 // রি টার্ন করবে একটি স্ট্রি ং যার ভ্যালুহবে “invalid”।
+
+function password(obj) {
+  const { siteName, name, birthYear } = obj;
+  if (siteName || name || birthYear || birthYear.toString().length !== 4) {
+    return "invalid";
+  }
+  const siteFirstLetter = siteName.charAt(0).toUpperCase();
+  const outPut =
+    siteFirstLetter + siteName.slice(1) + "#" + name + "@" + birthYear;
+  return outPut;
+}
+
+// console.log(password());
