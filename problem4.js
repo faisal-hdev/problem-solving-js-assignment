@@ -32,7 +32,7 @@
 
 function password(obj) {
   const { siteName, name, birthYear } = obj;
-  if (siteName || name || birthYear || birthYear.toString().length !== 4) {
+  if (!siteName || !name || !birthYear || birthYear.toString().length !== 4) {
     return "invalid";
   }
   const siteFirstLetter = siteName.charAt(0).toUpperCase();

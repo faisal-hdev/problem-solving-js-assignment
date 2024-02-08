@@ -50,4 +50,4 @@ function monthlySavings(arr, livingCost) {
   } else return totalSaving;
 }
 
-console.log(monthlySavings(100, [900, 2700, 3400]));
+// console.log(monthlySavings());

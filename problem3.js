@@ -28,15 +28,15 @@
 function deleteInvalids(array) {
   if (!Array.isArray(array)) {
     return "invalid array. input should be a valid Array.";
-  }
-
-  let numbersArr = [];
-  for (const element of array) {
-    if (!isNaN(element) && typeof element === "number") {
-      numbersArr.push(element);
+  } else {
+    let numbersArr = [];
+    for (const element of array) {
+      if (!isNaN(element) && typeof element === "number") {
+        numbersArr.push(element);
+      }
     }
+    return numbersArr;
   }
-  return numbersArr;
 }
 
 // console.log(deleteInvalids());
